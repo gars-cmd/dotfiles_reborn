@@ -1,0 +1,58 @@
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+
+eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
+
+
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
+
+# Auto-load completions
+autoload -U compinit && compinit
+
+#History
+HISTSIZE=5000
+HISTFILE=~/.config/zsh/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+#completion styling
+zstyle  ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+alias nv='nvim '
+alias zshconf='nv $HOME/.zshrc '
+# alias i3conf     'nv $HOME/.config/i3/config '
+alias picomconf='nv $HOME/.config/picom/picom.conf '
+alias dunstconf='nv $HOME/.config/dunst/dunstrc '
+alias kittyconf='nv $HOME/.config/kitty/kitty.conf '
+alias blogdir='nv $HOME/Documents/autre/web/blog/'
+alias nvimconf='nv $HOME/.config/nvim/init.lua '
+alias prettier='npx prettier --write '
+# alias roficonf   'nv $HOME/.config/rofi/'
+alias cpySync='sh $HOME/.config/scripts/cpySync.sh '
+alias termpdf='python3 $HOME/Downloads/soft/termpdf.py/termpdf.py'
+alias nnn='nnn -e -a '
+alias sourcef='source $HOME/.config/fish/config.fish '
+alias fishconf='nv $HOME/.config/fish/config.fish '
+alias update='sudo dnf update'
+alias hyprconf='nv ~/.config/hypr/hyprland.conf'
+alias ls='eza --icons '
+alias planning='nv $HOME/Sync-Devices/Événements\ A\ Venir.md'
+alias split_file='sh ~/.config/scripts/splitFile.sh'
+
+
+
+
