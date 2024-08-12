@@ -29,7 +29,7 @@ exec-once = syncthing
 # exec-once = wl-paste --type image --watch cliphist store #Stores only image data
 exec-once = clipse -listen
 # exec-once = wl-paste --type image --watch cliphist store 
-exec-once = swaybg -i ~/Pictures/Wallpapers/cherry-blossom-3440x1440-v0-8ap75j3ef8jc1.png
+exec-once = swaybg -i ~/Pictures/Wallpapers/x6qpz5ru4qad1.png
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
 
@@ -79,16 +79,11 @@ decoration {
 
     rounding = 5 #old = 5
     
-    blur {
-        enabled = true
-        size = 3
+    blur{
+        size = 5
         passes = 1
+        new_optimizations = on
     }
-
-    drop_shadow = yes
-    shadow_range = 4
-    shadow_render_power = 3
-    col.shadow = rgba(1a1a1aee)
 }
 
 animations {
@@ -236,7 +231,7 @@ bind = , XF86AudioNext, exec,$HOME/.config/dunst/media.sh forw
 bind = , XF86AudioPrev, exec,$HOME/.config/dunst/media.sh back 
  
 #KEYBOARD
-bind = $mainMod,SPACE, exec, /home/gars/.config/scripts/switch_layout.sh
+bind = ALT, SHIFT, exec, /home/gars/.config/scripts/switch_layout.sh
 
 
 #SCREENSHOT

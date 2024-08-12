@@ -3,4 +3,5 @@ return {
   "romgrk/fzy-lua-native",
   "dstein64/vim-startuptime",
   "m4xshen/smartcolumn.nvim",
+  "tris203/precognition.nvim",
 }

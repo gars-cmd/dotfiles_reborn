@@ -6,7 +6,7 @@ return {
     -- version = "*"
    config = function ()
         require('neogen').setup({ snippet_engine = "luasnip" })
-        vim.keymap.set("n", "<leader>cd", function () require('neogen').generate() end , { silent = true  })
+        vim.keymap.set("n", "<leader>gc", function () require('neogen').generate() end , { silent = true  })
    end,
 }
 

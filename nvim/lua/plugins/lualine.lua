@@ -3,8 +3,8 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons", opt = true },
 	config = function()
 		local colors = {
-			bg = "#191d24",
-			fg = "#fbf1c7",
+			bg = "#191724",
+			fg = "#f6c177",
 		}
 
 		local space = {
